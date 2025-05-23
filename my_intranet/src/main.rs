@@ -4,6 +4,13 @@
 use dioxus::prelude::*;
 
 use views::{ AppLayout, Home, Blog};
+use views::{
+    directory::Directory,
+    Resources,
+    Tools,
+    Departments,
+    Social,
+};
 mod components;
 mod views;
 
