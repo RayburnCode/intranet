@@ -27,34 +27,50 @@ pub fn Navbar(children: Element) -> Element {
                         {}
                         "Blog"
                     }
-                                // Link {
-                //     to: Route::Team {},
-                //     class: "hover:text-blue-400 transition",
-                //     "Team"
-                // }
-                // Link {
-                //     to: Route::Pricing {},
-                //     class: "hover:text-blue-400 transition",
-                //     "Pricing"
-                // }
-                // Link {
-                //     to: Route::Resources {},
-                //     class: "hover:text-blue-400 transition",
-                //     "Resources"
-                // }
-                // Link {
-                //     to: Route::Contact {},
-                //     class: "hover:text-blue-400 transition",
-                //     "Contact"
-                // }
-                // Button {
-                //     button_scheme: ButtonScheme::Custom,
-                //     button_size: ButtonSize::Large,
-                //     on_click: handle_click,
-                //     "Learn More"
-                // }
+                    Link {
+                        to: Route::Home {},
+                        class: "hover:text-blue-200 transition",
+                        "Home"
+                    }
+                    Link {
+                        to: Route::Directory {},
+                        class: "hover:text-blue-200 transition",
+                        "Directory"
+                    }
+                    Link {
+                        to: Route::Resources {},
+                        class: "hover:text-blue-200 transition",
+                        "Resources"
+                    }
+                    Link {
+                        to: Route::Tools {},
+                        class: "hover:text-blue-200 transition",
+                        "Tools"
+                    }
+                    Link {
+                        to: Route::Departments {},
+                        class: "hover:text-blue-200 transition",
+                        "Departments"
+                    }
+                    Link {
+                        to: Route::Social {},
+                        class: "hover:text-blue-200 transition",
+                        "Social"
+                    }
+                
+                // Conditional Admin Link (only shown to admins)
+                // You'll need to implement your auth logic
+                // {is_admin.then(|| rsx! {
+                //     Link {
+                //         to: Route::Admin {},
+                //         class: "hover:text-blue-200 transition text-red-300",
+                //         "Admin"
+                //     }
+                // })}
+
+                // User Profile Dropdown would go here
                 }
             }
         }
     }
-}
+    }

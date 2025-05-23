@@ -9,5 +9,14 @@ pub fn Home() -> Element {
     // };
     rsx! {
         Blog { id: 1 }
+        p { "Announcement Carousel" }
+        p { "Quick Links" }
+        p { "Metrics Dashboard" }
+        p { "HR Portal. /departments/hr" }
+        p { "IT Tickets. /tools/tickets" }
     }
+
+    
 }
+
+

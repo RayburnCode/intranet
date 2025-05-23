@@ -28,43 +28,126 @@ async fn iap_auth_middleware(
 }
 ```
 
-### Intranet use cases
+# Corporate Intranet Use Cases
 
-Local First: Cache critical docs/tools.
+## 1. Local-First & Offline Access
 
-Quick-access tools (tickets, forms, directories)
+- **Cached Resources**
+  - Policy documents (PDF/HTML)
+  - Emergency contact lists
+  - IT troubleshooting guides
+- **Sync Mechanism**
+  - Background updates when online
+  - Conflict resolution for offline edits
 
-1. Announcements & News Feed
+## 2. Quick-Access Tools
 
-- Company-wide updates (priority tagging: urgent, general)
-- Leadership messages (video/text)
+- **Tickets**
+  - IT/HR ticket submission + attachments
+  - Status tracking (Pending/Resolved)
+- **Forms**
+  - Dynamic forms (leave requests, orders)
+  - Draft autosave
+- **Directories**
+  - Office maps with desk numbers
+  - Vendor contacts database
 
-2. Employee Directory
+## 3. Announcements & News Feed
 
-- Searchable org chart
-- Contact details (email, phone, Slack/MS Teams)
+- **Priority Tiers**
+  - `Urgent` (red banners, push notifications)
+  - `Department-Specific` (filterable)
+- **Multimedia**
+  - Embedded CEO videos
+  - Audio briefings
 
-3. Calendar & Events
+## 4. Employee Directory
 
-4. Internal Forums or Wikis
+- **Advanced Features**
+  - Skills tagging (e.g., "Python", "Six Sigma")
+  - Real-time status (OoO/In Meeting)
+- **Dark Mode**
+  - For shift workers
 
-- Q&A boards (Stack Overflow-style)
-- Knowledge base (FAQs, troubleshooting)
-- Best practices documentation
+## 5. Calendar & Events
 
-5. IT Support Center
+- **Integrations**
+  - Google Calendar/Outlook sync
+  - Room booking with floor plans
+- **Views**
+  - Team timelines
+  - Company milestones
 
-- System status (outage alerts)
-- Software request forms
-- Password reset guides
+## 6. Internal Forums & Wikis
 
-6. Policy Repository
+- **Moderation**
+  - Upvote/downvote system
+  - Content flagging
+- **Templates**
+  - Standardized how-to guides
 
-- Company handbook
-- Compliance training (GDPR, HIPAA)
-- Mandatory acknowledgments (e.g., security policies
+## 7. IT Support Center
 
-7. Social & Engagement
+- **Self-Service**
+  - Chatbot for common issues
+  - Automated password reset
+- **Hardware**
+  - Equipment checkout system
 
-- Pulse surveys (e.g., "How’s remote work?")
-- Reviews of LO's and Processors
+## 8. Policy Repository
+
+- **Compliance**
+  - Digital signature collection
+  - Retraining reminders
+- **Version Control**
+  - Change diffs
+  - Deprecated policy archive
+
+## 9. Social & Engagement
+
+- **Surveys**
+  - Anonymous pulse checks
+  - Real-time HR dashboards
+- **Performance**
+  - LO/Processor review templates
+  - Peer "Kudos" badges
+
+## 10. Additional Critical Use Cases
+
+### A. Onboarding Portal
+
+- **Checklists**
+  - Day 1 tasks (email setup)
+  - 30/60/90-day goals
+- **Mentor Matching**
+  - Auto-assign by role
+
+### B. Analytics & Reporting
+
+- **Metrics**
+  - Pageview heatmaps
+  - Search term trends
+- **Custom Reports**
+  - Exportable HR datasets
+
+### C. Emergency Protocols
+
+- **Crisis Tools**
+  - One-click office closure alerts
+  - Geolocated safety guides
+
+### D. Department Hubs
+
+- **Finance**
+  - Budget dashboards
+- **Legal**
+  - Contract repository
+
+---
+
+> **Implementation Note**:  
+> All features should support:
+>
+> - Role-based access control (RBAC)
+> - Audit logging
+> - Mobile responsiveness

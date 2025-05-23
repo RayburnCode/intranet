@@ -17,16 +17,16 @@ enum Route {
         Home {},
         #[route("/blog/:id")]
         Blog { id: i32 },
-        // #[route("/about")]
-        // About {},
-        // #[route("/team")]
-        // Team {},
-        // #[route("/pricing")]
-        // Pricing {},
-        // #[route("/resources")]
-        // Resources {},
-        // #[route("/contact")]
-        // Contact {},
+        #[route("/directory")]
+        Directory {},
+        #[route("/resources")]
+        Resources {},
+        #[route("/tools")]
+        Tools {},
+        #[route("/departments")]
+        Departments {},
+        #[route("/social")]
+        Social {},
 }
 
 

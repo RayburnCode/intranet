@@ -20,5 +20,3 @@ pub use navbar::Navbar;
 mod layout;
 pub use layout::AppLayout;
 
-mod footer;
-pub use footer::Footer;
