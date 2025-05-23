@@ -13,4 +13,8 @@ pub use layout::AppLayout;
 
 
 mod admin;
-mod directory;
+pub mod directory;
+pub mod resources;
+pub mod tools;
+pub mod departments;
+pub mod social;

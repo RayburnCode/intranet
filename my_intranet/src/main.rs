@@ -6,10 +6,10 @@ use dioxus::prelude::*;
 use views::{ AppLayout, Home, Blog};
 use views::{
     directory::Directory,
-    Resources,
-    Tools,
-    Departments,
-    Social,
+    resources::Resources,
+    tools::Tools,
+    departments::Departments,
+    // Social,
 };
 mod components;
 mod views;
@@ -28,12 +28,21 @@ enum Route {
         Directory {},
         #[route("/resources")]
         Resources {},
+        // #[route("/resources/:name")]
+        // ResourceDetail { name: String },
         #[route("/tools")]
         Tools {},
+    //         #[route("/tools/tickets/:id")]
+    // TicketDetail { id: u64 },
+    // #[route("/tools/rooms/:id")]
+    // RoomDetail { id: u64 },
         #[route("/departments")]
         Departments {},
-        #[route("/social")]
-        Social {},
+        // #[route("/social")]
+        // Social {},
+
+        // #[route("/social/post/:id")]
+        //  SocialPost { id: u64 },
 }
 
 

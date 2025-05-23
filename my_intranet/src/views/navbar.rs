@@ -52,13 +52,14 @@ pub fn Navbar(children: Element) -> Element {
                         class: "hover:text-blue-200 transition",
                         "Departments"
                     }
+
+                    // Will need to change this
                     Link {
-                        to: Route::Social {},
+                        to: Route::Departments {},
                         class: "hover:text-blue-200 transition",
                         "Social"
                     }
-                
-                // Conditional Admin Link (only shown to admins)
+                                // Conditional Admin Link (only shown to admins)
                 // You'll need to implement your auth logic
                 // {is_admin.then(|| rsx! {
                 //     Link {
