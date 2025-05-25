@@ -9,7 +9,9 @@ use views::{
     resources::Resources,
     tools::Tools,
     departments::Departments,
-    // Social,
+    social::Social,
+    admin::{Admin,AdminUserCreate,AdminUserEdit},
+    user::{UserProfile,UserSettings}
 };
 mod components;
 mod views;
@@ -38,8 +40,18 @@ enum Route {
     // RoomDetail { id: u64 },
         #[route("/departments")]
         Departments {},
-        // #[route("/social")]
-        // Social {},
+        #[route("/social")]
+        Social {},
+        #[route("/admin")]
+        Admin {},
+        #[route("/admincrate")]
+        AdminUserCreate,
+        #[route("/adminedit/:id")]
+        AdminUserEdit { id: u64 },
+        #[route("/profile")]
+        UserProfile,        
+        #[route("/settings")]
+        UserSettings,
 
         // #[route("/social/post/:id")]
         //  SocialPost { id: u64 },

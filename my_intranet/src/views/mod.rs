@@ -12,9 +12,11 @@ mod layout;
 pub use layout::AppLayout;
 
 
-mod admin;
+pub mod admin;
 pub mod directory;
 pub mod resources;
 pub mod tools;
 pub mod departments;
 pub mod social;
+pub mod user;
+
