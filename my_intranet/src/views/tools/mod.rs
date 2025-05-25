@@ -252,11 +252,11 @@ pub fn Tools() -> Element {
 }
 
 #[component]
-fn ToolsTab(label: &'static str, tab_id: &'static str, active_tab: ReadSignal<String>, icon: &'static str) -> Element {
+fn ToolsTab(label: &'static str, tab_id: &'static str, active_tab: Signal<String>, icon: &'static str) -> Element {
     rsx! {
-fn ToolsTab(label: &'static str, tab_id: &'static str, active_tab: ReadSignal<String>, icon: &'static str) -> Element {
+        div {
             class: {
-                if active_tab.get() == tab_id {
+                if active_tab() == tab_id {
                     "whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center border-blue-500 text-blue-600"
                 } else {
                     "whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"

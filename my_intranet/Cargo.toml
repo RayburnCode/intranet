@@ -11,6 +11,7 @@ edition = "2021"
 dioxus = { version = "0.6.0", features = ["router", "fullstack"] }
 # tokio = { version = "1.45.0", features = ["full"] }
 log = "0.4.27"
+chrono = "0.4.41"
 [features]
 default = ["web"]
 # The feature that are only required for the web = ["dioxus/web"] build target should be optional and only enabled in the web = ["dioxus/web"] feature
