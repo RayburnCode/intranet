@@ -13,6 +13,8 @@ struct Employee {
     name: String,
     title: String,
     department: String,
+    phone_number: Option<String>,
+    email: Option<String>,
     avatar: String,
 }
 
@@ -43,6 +45,12 @@ fn EmployeeCard(employee: Employee) -> Element {
                 p { class: "font-medium text-gray-800", "{employee.name}" }
                 p { class: "text-sm text-gray-500", "{employee.title}" }
                 p { class: "text-xs text-gray-400", "{employee.department}" }
+                if let Some(phone) = &employee.phone_number {
+                    p { class: "text-xs text-gray-400", "Phone: {phone}" }
+                }
+                if let Some(email) = &employee.email {
+                    p { class: "text-xs text-gray-400", "Email: {email}" }
+                }
             }
         }
     }
@@ -60,32 +68,42 @@ pub fn OrgChartView() -> Element {
                     title: "CEO".to_string(),
                     department: "Executive".to_string(),
                     avatar: "/avatars/sarah.png".to_string(),
+                    email: Some("test@test.com".to_string()),
+                    phone_number: Some("111-111-1111".to_string()),
+
                 },
                 Employee {
                     name: "Michael Chen".to_string(),
                     title: "CTO".to_string(),
                     department: "Technology".to_string(),
                     avatar: "/avatars/michael.png".to_string(),
+                    email: Some("test@test.com".to_string()),
+                    phone_number: Some("111-111-1111".to_string()),
                 },
             ],
         },
         Team {
-            name: "Engineering".to_string(),
+            name: "Team Members".to_string(),
             members: vec![
                 Employee {
                     name: "Alex Rivera".to_string(),
                     title: "Senior Developer".to_string(),
                     department: "Engineering".to_string(),
                     avatar: "/avatars/alex.png".to_string(),
+                    email: Some("test@test.com".to_string()),
+                    phone_number: Some("111-111-1111".to_string()),
                 },
                 Employee {
                     name: "Jamie Smith".to_string(),
                     title: "QA Engineer".to_string(),
                     department: "Engineering".to_string(),
                     avatar: "/avatars/jamie.png".to_string(),
+                    email: Some("test@test.com".to_string()),
+                    phone_number: Some("111-111-1111".to_string()),
                 },
             ],
         },
+        
     ];
 
     rsx! {

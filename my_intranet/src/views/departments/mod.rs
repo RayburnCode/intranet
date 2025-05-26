@@ -3,6 +3,18 @@ use dioxus::prelude::*;
 #[component]
 pub fn Departments() -> Element {
     let departments = vec![
+                Department {
+            name: "Sales".to_string(),
+            description: "Client acquisition and mortgage consultation - helping borrowers find the right loan products".to_string(),            
+            icon: "👥".to_string(),
+            route: "/departments/sales",
+        },
+                Department {
+            name: "Operations".to_string(),
+            description: "Facilities, logistics, and office management".to_string(),
+            icon: "🏭".to_string(),
+            route: "/departments/operations",
+        },
         Department {
             name: "Human Resources".to_string(),
             description: "Employee relations, benefits, and company policies".to_string(),
@@ -16,34 +28,24 @@ pub fn Departments() -> Element {
             route: "/departments/it",
         },
         Department {
-            name: "Finance".to_string(),
-            description: "Accounting, payroll, and financial reporting".to_string(),
+            name: "Compliance".to_string(),
+            description: "Regulatory compliance oversight, audit management, and MLO licensing maintenance".to_string(),            
             icon: "💰".to_string(),
             route: "/departments/finance",
         },
-        Department {
-            name: "Operations".to_string(),
-            description: "Facilities, logistics, and office management".to_string(),
-            icon: "🏭".to_string(),
-            route: "/departments/operations",
-        },
+
         Department {
             name: "Marketing".to_string(),
             description: "Branding, communications, and campaigns".to_string(),
             icon: "📢".to_string(),
             route: "/departments/marketing",
         },
-        Department {
-            name: "Engineering".to_string(),
-            description: "Product development and technical innovation".to_string(),
-            icon: "⚙️".to_string(),
-            route: "/departments/engineering",
-        },
+
     ];
 
     rsx! {
         div { class: "p-6 max-w-7xl mx-auto",
-            h1 { class: "text-3xl font-bold text-gray-800 mb-6", "Departments" }
+            h1 { class: "text-3xl font-bold text-gray-800 mb-6", "Department's Page" }
             p { class: "text-gray-600 mb-8", "Browse company departments and access their resources" }
             // Responsive grid - 1 column on mobile, 2 on tablet, 3 on desktop
             div { class: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
